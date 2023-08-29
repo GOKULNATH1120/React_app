@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/React_app/static/css/main.7bdb933a.css",
+    "main.js": "/React_app/static/js/main.1196fa24.js",
+    "static/js/787.fad1ebcf.chunk.js": "/React_app/static/js/787.fad1ebcf.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/React_app/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/React_app/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
+    "static/media/man.png": "/React_app/static/media/man.75440f15f84006bcb699.png",
+    "static/media/mobile.png": "/React_app/static/media/mobile.fe5e4cfa5d3ceebf25bf.png",
+    "static/media/lap.png": "/React_app/static/media/lap.e37b98e4e68881511e19.png",
+    "static/media/brand.png": "/React_app/static/media/brand.437c23ef78646e1043a3.png",
+    "static/media/under.png": "/React_app/static/media/under.485e22bc29934903872f.png",
+    "static/media/fintech.png": "/React_app/static/media/fintech.a246bfe6ba3d515a73a9.png",
+    "static/media/erp.png": "/React_app/static/media/erp.4d1352944ffc50d905c2.png",
+    "index.html": "/React_app/index.html",
+    "main.7bdb933a.css.map": "/React_app/static/css/main.7bdb933a.css.map",
+    "main.1196fa24.js.map": "/React_app/static/js/main.1196fa24.js.map",
+    "787.fad1ebcf.chunk.js.map": "/React_app/static/js/787.fad1ebcf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bdb933a.css",
+    "static/js/main.1196fa24.js"
+  ]
+}
