@@ -3,6 +3,11 @@
 
 
 
+
+
+
+
+
   
  /* Contact us button */
 .rectangle-section-12 {
@@ -45,7 +50,7 @@
 
  /* gradient text */
 .gradient-text {
-    background: linear-gradient(to right, #0074D9, #2ECC40);
+    background: linear-gradient(to right, #0074D9, skyblue);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -59,7 +64,7 @@
   .buttons-container {
     display: flex;
     gap: 10px;
-    margin-top: 60px;
+    margin-top: 150px;
   }
   
   .black-button {
@@ -73,7 +78,98 @@
   }
   
  
-/* form style */
+
+
+/* YourComponent.css */
+
+/* Adjust form column alignment */
+.d-flex.justify-content-end {
+  justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-column {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-container {
+  width: 100%; /* Adjust width as needed */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Additional styles as needed */
+.form-container h4,
+.form-container p {
+  margin-bottom: 10px;
+}
+
+.form-container .btn {
+  width: 100%; /* Button width takes the full width of the form */
+}
+
+
+
+
+
+@media (min-width: 768px) {
+  .form-container {
+    position: sticky;
+    top: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .form-section {
@@ -361,6 +457,25 @@
 }
 
 
+.with-button-shadow {
+  position: relative;
+  overflow: hidden; 
+  border-radius: 15px; 
+  background-color: rgb(206, 208, 209); /* Clear the background to see the shadow */
+
+  
+  box-shadow: 0 6px 12px rgba(5, 5, 5, 0.1); /* Adjust the shadow properties as needed */
+}
+
+.with-button-shadow p {
+  position: relative;
+  z-index: 1; 
+}
+
+
+
+
+
 
 /*mind map */
 
@@ -638,8 +753,19 @@ h2 {
 
 .horizontal-section-77 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+/* Adjust spacing between columns on the right side */
+.horizontal-section-77 .col {
+  padding-right: 1px; /* Adjust this value to control spacing */
+  margin-right: -1px; /* Counteract padding with negative margin */
+}
+
+/* Adjust last column's margin to compensate for negative margin */
+.horizontal-section-77 .col:last-child {
+  margin-right: 0; /* Reset margin for the last column */
 }
 
 p {
@@ -649,21 +775,39 @@ p {
 }
 
 
-
-.form-container {
-  margin-top: 50px;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 10px; /* Add border radius for rectangle shape */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Apply box shadow */
-  border: 1px solid #ccc; /* Add a border */
+/* Adjust overlay positioning */
+.overlay-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align the form to the left side */
-  width: 60%; /* Adjust the form width */
-  margin-left: auto; /* Push the form to the right side corner */
-  margin-right: 0; /* Reset default margin */
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Place the overlay on top */
+  
 }
+
+/* Style the overlay form */
+.form-col {
+  position: absolute; /* Position the form absolutely within the overlay */
+  top: 50%; /* Center the form vertically */
+  right: 50px; /* Align the form to the right edge of the overlay */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 500px; /* Adjust the width as needed */
+  margin-top: 400px;
+  
+}
+
+/* Adjust other styles as needed */
+
+
 
 
 /*company logos*/
@@ -792,6 +936,12 @@ p {
 
 
 /*card container mind map*/
+
+
+
+
+
+
 
 
 

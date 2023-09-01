@@ -12,6 +12,11 @@ import { FaPlus } from 'react-icons/fa'; // Import the plus icon
 import { FaStar } from 'react-icons/fa';
 import google from '../Images/google.png';
 
+import { FaSearch } from 'react-icons/fa';
+import { BsBuilding, BsPeople } from 'react-icons/bs';
+
+
+
 
 
 import image1 from '../Images/dollor.png'; // Import the image
@@ -35,6 +40,11 @@ import brand from '../Images/brand.png'
 import clutch from '../Images/clutch.png'
 
 
+import { FormControl, InputGroup } from "react-bootstrap";
+
+
+
+
 
 const Home = ( ) => {
    const starRating = 3;
@@ -43,62 +53,85 @@ const Home = ( ) => {
         
         <Header/>
         <Container className="py-5">
-          <Row>
-              <Col md={5}>
-                <h1 className="custom-font-size">We Build, Operate,Transform your businesses{''}
-                <span className="gradient-text">Digitally</span> </h1>
-                <p>Take charge of your business continuity
-                 with innovative IT solutions</p>
-
-                 <div className="buttons-container" >
-              <Button variant="dark" className="black-button">Schedule a Free Consultation</Button>
-              <Button variant="secondary" className="hash-button">Services</Button>
-            </div>
-
-             {/* form section */}
-
-            <div className="form-section">
-           <Container>
-        <div className="form-content shadow-box">
-          <div className="header">
-            <h6 className="bold-header">Get a Quote from Our Experts</h6>
-            <p className="small-text">Find the services you need and receive quotes from our team of Specialists.</p>
+      <Row>
+        <Col md={7}>
+          <h1 style={{ fontSize: '3rem' }} className="custom-font-size">
+            We Build, Operate, Transform your businesses
+            <span className="gradient-text">  Digitally</span>
+          </h1>
+          <p style={{ fontSize: '1.5rem' }}>
+            Take charge of your business continuity with innovative IT solutions
+          </p>
+          <div className="buttons-container">
+            <Button variant="dark" className="black-button">
+              Schedule a Free Consultation
+            </Button>
+            <Button variant="secondary" className="hash-button">
+              Services
+            </Button>
           </div>
+        </Col>
+        <Col md={5} className="d-flex justify-content-end">
+          <div className="form-container shadow border mt-4 p-4">
           <Form>
-            <div className="field">
-              <Form.Control type="text" placeholder="Search services..." />
-            </div>
-            <div className="field">
-              <Form.Control type="tel" placeholder="Mobile Number" />
-            </div>
-            <div className="button-wrapper">
-              <Button variant="dark">Submit</Button>
-            </div>
-          
-           {/* icons*/}
+              <h4 className="fw-bold">Get a Quote from our experts.</h4>
+              <p>
+                Find the services you need and receive quotes from our team of Specialists.
+              </p>
+              <InputGroup className="my-4 py-2">
+                <InputGroup.Text id="basic-addon1">
+                  <i className="bi bi-search"></i>
+                </InputGroup.Text>
+                <Form.Select
+                  aria-label="Default select example"
+                  className="py-3"
+                  placeholder="Search Services"
+                >
+                  <option>search services</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </Form.Select>
+              </InputGroup>
+              <InputGroup className="my-4 py-2">
+                <InputGroup.Text id="basic-addon1">+91</InputGroup.Text>
+                <FormControl
+                  placeholder="9999999999"
+                  aria-label="number"
+                  className="py-3"
+                />
+              </InputGroup>
+              <div className="py-2 text-center">
+                <span>
+                  <Button className= "p-2 px-4" variant="dark">
+                    Submit and Next
+                  </Button>
+                </span>
+              </div>
+              <div className="d-flex mb-2 pt-4 text-center">
+                <div className="d-flex px-5">
+                  <h1 className="px-2">
+                    <i className="bi bi-building"></i>
+                  </h1>
+                  <p>
+                    <span className="fw-bolder">1000</span> <br /> Clients
+                  </p>
+                </div>
+                <div className="d-flex border-start border-dark px-5">
+                  <h1 className="px-2 fw-bold">
+                    <i className="bi bi-people" />
+                  </h1>
+                  <p>
+                    <span className="fw-bolder">1000</span> Agencies
+                  </p>
+                </div>
+              </div>
+            </Form>
+          </div>
+        </Col>
+      </Row>
+    </Container>
 
-            <div className="icon-container text-center d-flex align-items-center">
-                 <div className="icon-with-text">
-                 <i className="bi bi-building"></i>
-                <strong className="bold-number">1000</strong>
-                <p>Clients</p>
-                <div className="vertical-line"></div>
-            </div>
-               <div className="icon-with-text">
-              <div className="vertical-line"></div>
-              <i className="bi bi-person"></i>
-             <strong className="bold-number">1000</strong>
-             <p>Agencies</p>
-             </div>
-           </div>
-
-          </Form>
-        </div>
-      </Container>
-       </div>
-              </Col>
-          </Row>
-        </Container>
         <hr className="horizontal-line" /> {/* horizontal line  */}
 
         {/* start review  */}
@@ -242,116 +275,168 @@ const Home = ( ) => {
     {/* icon with names*/}
 
     <section className="custom-section-container">
-      <Container className="custom-container">
-        <div className="custom-button-container">
-          <Button variant="dark" className="custom-how-we-do-button">How We Do It</Button>
-        </div>
-        <h2 className="custom-header-text">Solving IT challenges in every <br/> industry, every day.</h2>
-        <div className="custom-icon-row center-icons">
-          <div className="custom-icon-container">
-            <FaIndustry className="custom-icon blue-icon"  />
-            <p className="custom-icon-name">Industry & Manufacturing</p>
-          </div>
-          <div className="custom-icon-container">
-            <FaTruck className="custom-icon blue-icon" />
-            <p className="custom-icon-name">Transportation & Logistics</p>
-          </div>
-          <div className="custom-icon-container">
-            <FaHeart className="custom-icon blue-icon" />
-            <p className="custom-icon-name">Healthcare</p>
-          </div>
-        </div>
-        <div className="custom-icon-row center-icons">
-          <div className="custom-icon-container">
-            <FaUniversity className="custom-icon blue-icon" />
-            <p className="custom-icon-name">Banks & Insurance</p>
-          </div>
-          <div className="custom-icon-container">
-            <FaHandsHelping className="custom-icon blue-icon" />
-            <p className="custom-icon-name">Consulting Providers</p>
-          </div>
-          <div className="custom-icon-container">
-            <FaHome className="custom-icon blue-icon" />
-            <p className="custom-icon-name">Non-Profit</p>
-          </div>
-        </div>
-        <p className="custom-read-more-text">View All Industries</p>
-      </Container>
-    </section>
+  <Container className="custom-container">
+    <div className="custom-button-container">
+      <Button variant="dark" className="custom-how-we-do-button">How We Do It</Button>
+    </div>
+    <h2 className="custom-header-text">Solving IT challenges in every <br/> industry, every day.</h2>
+    <div className="custom-icon-row center-icons">
+      <div className="custom-icon-container with-button-shadow"> {/* Added 'with-oval-shadow' class */}
+        <FaIndustry className="custom-icon blue-icon" />
+        <p className="custom-icon-name">Industry & Manufacturing</p>
+      </div>
+      <div className="custom-icon-container with-button-shadow"> {/* Added 'with-oval-shadow' class */}
+        <FaTruck className="custom-icon blue-icon" />
+        <p className="custom-icon-name">Transportation & Logistics</p>
+      </div>
+      <div className="custom-icon-container with-button-shadow"> {/* Added 'with-oval-shadow' class */}
+        <FaHeart className="custom-icon blue-icon" />
+        <p className="custom-icon-name">Healthcare</p>
+      </div>
+    </div>
+    <div className="custom-icon-row center-icons">
+      <div className="custom-icon-container with-button-shadow"> {/* Added 'with-oval-shadow' class */}
+        <FaUniversity className="custom-icon blue-icon" />
+        <p className="custom-icon-name">Banks & Insurance</p>
+      </div>
+      <div className="custom-icon-container with-button-shadow"> {/* Added 'with-oval-shadow' class */}
+        <FaHandsHelping className="custom-icon blue-icon" />
+        <p className="custom-icon-name">Consulting Providers</p>
+      </div>
+      <div className="custom-icon-container with-button-shadow"> {/* Added 'with-oval-shadow' class */}
+        <FaHome className="custom-icon blue-icon" />
+        <p className="custom-icon-name">Non-Profit</p>
+      </div>
+    </div>
+    <p className="custom-read-more-text">View All Industries</p>
+  </Container>
+</section>
+
+
 
     {/*mind map*/}
 
-    <div className="position-relative mx-lg-20 bg-dark text-white rounded p-4">
-      <Button variant="light" size="lg" active>WHAT WE USE</Button>
-      <h3>Bringing the best IT vendors to you.</h3>
-      <p>Working only with the best, to ensure the quality of our services, and to bring state of the art technology to those who need it.</p>
-
-      <Row className='p-5'>
-        <Col className="d-flex justify-content-center"> {/* Center the Your IT Challenges card */}
-          <Card style={{ width: '18rem', backgroundColor: 'black', color: 'white' }}>
-            <Card.Body>
-              <Card.Title>Your IT Challenges</Card.Title>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-
-      {/* Cards */}
-      <Row className='p-5'>
-        <Col>
-          <Card style={{ width: '18rem', backgroundColor: 'black', color: 'white' }}>
-            <Card.Body>
-              <Card.Title>Datacenter & Hosting</Card.Title>
-              <Card.Text>
-                Our facility – Data Center – is the first in the USA that meets the strict ANSI/TIA-942 rated 4 certificate requirements for design, build, and operate.
-              </Card.Text>
-              <Card.Link href='#' className="d-flex align-items-center text-white">
-                <span className="d-flex align-items-center">
-                  <FaPlus className="mr-2" />
-                  View more
-                </span>
-              </Card.Link>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col>
-          <Card style={{ width: '18rem', backgroundColor: 'black', color: 'white' }}>
-            <Card.Body>
-              <Card.Title>Datacenter & Hosting</Card.Title>
-              <Card.Text>
-                Our facility – Data Center – is the first in the USA that meets the strict ANSI/TIA-942 rated 4 certificate requirements for design, build, and operate.
-              </Card.Text>
-              <Card.Link href='#' className="d-flex align-items-center text-white">
-                <span className="d-flex align-items-center">
-                  <FaPlus className="mr-2" />
-                  View more
-                </span>
-              </Card.Link>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col>
-          <Card style={{ width: '18rem', backgroundColor: 'black', color: 'white' }}>
-            <Card.Body>
-              <Card.Title>Datacenter & Hosting</Card.Title>
-              <Card.Text>
-                Our facility – Data Center – is the first in the USA that meets the strict ANSI/TIA-942 rated 4 certificate requirements for design, build, and operate.
-              </Card.Text>
-              <Card.Link href='#' className="d-flex align-items-center text-white">
-                <span className="d-flex align-items-center">
-                  <FaPlus className="mr-2" />
-                  View more
-                </span>
-              </Card.Link>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </div>
-    
-                     
+    <div class="bg-dark  py-5">
+        <div class="container">
+          <div className=" p-4">
+            <Button variant="secondary">WHAT WE USE</Button>
+          </div>
+          <p class=" fw-bold what-we-do-heading text-light display-5">
+            Bringing the best IT vendors to you.
+          </p>
+          <small class="text-light">
+            Working only with the best, to ensure the quality of our services,
+            and to bring state of the art technology to those who need it.
+          </small>
+        </div>
+        <div class="text-center py-5">
+          <div class=" d-inline-block ">
+            <div class="controls bg-black p-2 rounded-top d-flex align-items-center">
+              <button
+                type="button"
+                class="rounded-circle bg-dark border-0 button-dimension d-flex align-items-center btn btn-primary"
+              >
+                <i class="bi bi-arrow-left-short fs-2 text-secondary "></i>
+              </button>
+              <h4 class="text-light px-3">Your IT Challenges</h4>
+              <button
+                type="button"
+                class="rounded-circle bg-dark border-0 button-dimension d-flex align-items-center btn btn-primary"
+              >
+                <i class="bi bi-arrow-right-short fs-2 text-secondary "></i>
+              </button>
+            </div>
+          </div>
+          <div class="row d-grid p-0 m-0">
+            <div class="col border-5 border-top border-black  d-lg-flex ">
+              .<div class="col border-5 border-end  border-black">.</div>
+              <div class="col border-5 border-end border-black">.</div>
+              <div class="col border-5 border-end  border-black">.</div>
+              <div class="col border-5  ">.</div>
+            </div>
+          </div>
+          <div class="container ">
+            <div class="row">
+              <div class="col">
+                <div class="card-carousel">
+                  <div class="card-group">
+                    <div class="card mx-3 border-0 rounded challenges-container">
+                      <div class="card-body bg-black  text-start">
+                        <h5 class="card-title text-light text-20px">
+                          Datacenter &amp; Hosting
+                        </h5>
+                        <p class="card-text text-secondary text-14px">
+                          Our facility – Data Center – is the first in the USA
+                          that meets the strict ANSI/TIA-942 rated 4 certificate
+                          requirements for design, build, and operate.
+                        </p>
+                        <div class="d-flex text-center">
+                          <div class="bg-secondary  rounded-circle">
+                            <i class="bi bi-plus px-1"></i>
+                          </div>
+                          <a
+                            href="#"
+                            class="px-2 text-decoration-none text-light text-12px"
+                          >
+                            View More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mx-3 border-0 rounded challenges-container">
+                      <div class="card-body bg-black  text-start">
+                        <h5 class="card-title text-light text-20px">
+                          Collaboration
+                        </h5>
+                        <p class="card-text text-secondary text-14px">
+                          Despite modern cloud technology, your users operate in
+                          a familiar Microsoft Office environment and benefit
+                          from broad compatibility and low-threshold access.
+                        </p>
+                        <div class="d-flex text-center">
+                          <div class="bg-secondary  rounded-circle">
+                            <i class="bi bi-plus px-1"></i>
+                          </div>
+                          <a
+                            href="#"
+                            class="px-2 text-decoration-none text-light text-12px"
+                          >
+                            View More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mx-3 border-0 rounded challenges-container">
+                      <div class="card-body bg-black  text-start">
+                        <h5 class="card-title text-light text-20px">
+                          Cloud Plattform
+                        </h5>
+                        <p class="card-text text-secondary text-14px">
+                          Customized cloud platform designed to improve
+                          performance, lower IT costs, and provide secure and
+                          reliable access to your company data from any device,
+                          anytime, anywhere.
+                        </p>
+                        <div class="d-flex text-center">
+                          <div class="bg-secondary  rounded-circle">
+                            <i class="bi bi-plus px-1"></i>
+                          </div>
+                          <a
+                            href="#"
+                            class="px-2 text-decoration-none text-light text-12px"
+                          >
+                            View More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
                   
             
                      
@@ -480,126 +565,139 @@ const Home = ( ) => {
 
 {/* overlayout container  */}
 
-<div className="main-container-s">
-<Container className="custom-container-s">
-  <div className="contact-button-s">
-    <Button variant="Dark">Contact Us</Button>
-  </div>
-  <div className="partner-text-s">
-    <strong>Partner with Us for<br/> Comprehensive IT</strong>
-  </div>
-</Container>
+<div className="page-container">
+      <div className="overlay-container">
+        <Container>
+          <Row>
+            <Col md={6} className="form-col">
+              <div className="form-container">
+                <h3>Schedule a Free Consultation</h3>
+                <hr />
+                <Form>
+                <Row>
+               <Col>
+               <Form.Group controlId="firstName"> 
+              <Form.Label>First Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter first name" required />
+                   </Form.Group>
+                   </Col>
+                   <Col>
+                <Form.Group controlId="lastName">
+                   <Form.Label>Last Name</Form.Label>
+                 <Form.Control type="text" placeholder="Enter last name" required />
+                </Form.Group>
+             </Col>
+              </Row>
+                  <Form.Group controlId="company">
+                    <Form.Label>Company / Organization</Form.Label>
+                    <Form.Control type="text" placeholder="Enter company/organization" />
+                  </Form.Group>
+                  <Form.Group controlId="email">
+                    <Form.Label>Company Email</Form.Label>
+                    <Form.Control type="email" placeholder="Enter email" required />
+                  </Form.Group>
+                  <Form.Group controlId="phone">
+                    <Form.Label>Phone</Form.Label>
+                    <Form.Control type="tel" placeholder="Enter phone number" required />
+                  </Form.Group>
+                  <Form.Group controlId="help">
+                    <Form.Label>How Can We Help You?</Form.Label>
+                    <Form.Control as="select">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </Form.Control>
+                  </Form.Group>
+                  <Form.Group controlId="message">
+                    <Form.Label>Message</Form.Label>
+                    <Form.Control as="textarea" rows={4} placeholder="Enter your message" required />
+                  </Form.Group>
+                  <Button variant="secondary" type="submit">
+                    Submit
+                  </Button>
+                </Form>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </div>
+
+
+    <div className="main-container-s">
+        <Container className="custom-container-s">
+          <div className="contact-button-s">
+            <Button variant="dark">Contact Us</Button>
+          </div>
+          <div className="partner-text-s">
+            <strong>Partner with Us for<br /> Comprehensive IT</strong>
+          </div>
+        </Container>
+      </div>
+
+
+
+      <div className="main-container-r">
+  <Container className="custom-container-r">
+    <Row>
+      <Col>
+        <div className="partner-text-r">
+          <p>We're happy to answer any questions you may have and help<br />
+            you determine which of our services best fit your needs.</p>
+          <p>Call us at: 1 800 356-8933</p><br />
+          <h4>Your benefits:</h4>
+        </div>
+        <Container>
+          <Row className="item-50">
+            <Col xs={1} className="icon-50">
+              ✓
+            </Col>
+            <Col xs={11} className="text">
+              Client oriented
+            </Col>
+          </Row>
+          <Row className="item-50">
+            <Col xs={1} className="icon-50">
+              ✓
+            </Col>
+            <Col xs={11} className="text">
+              Independent
+            </Col>
+          </Row>
+          <Row className="item-50">
+            <Col xs={1} className="icon-50">
+              ✓
+            </Col>
+            <Col xs={11} className="text">
+              Competent
+            </Col>
+          </Row>
+        </Container>
+        <br /><br />
+        <h4>What happens next?</h4>
+        <Container>
+          <Row className="horizontal-section-77">
+            <Col>
+              <p>1 We Schedule a call at<br/>your convenience</p>
+            </Col>
+            <Col>
+              <p><strong>2</strong> We do a discovery<br/>and consulting meeting</p>
+            </Col>
+            <Col>
+              <p><strong>3</strong> We prepare a<br/>proposal</p>
+            </Col>
+          </Row>
+        </Container>
+      </Col>
+    </Row>
+  </Container>
 </div>
 
 
-
-{/*overlay form*/}
-
-
-<div className="main-container-r">
-            <Container className="custom-container-r">
-                <Row>
-                    <Col>
-                        <div className="partner-text-r">
-                            <p>We're happy to answer any questions you may have and help<br />
-                                you determine which of our services best fit your needs.</p>
-                            <p>Call us at: 1 800 356-8933</p><br />
-                            <h4>Your benefits:</h4>
-                        </div>
-                        <Container>
-                        <Row className="item-50">
-        <Col xs={1} className="icon-50">
-          ✓
-        </Col>
-        <Col xs={11} className="text">
-        Client oriented
-        </Col>
-      </Row>
-      <Row className="item-50">
-        <Col xs={1} className="icon-50">
-          ✓
-        </Col>
-        <Col xs={11} className="text">
-        Independent
-        </Col>
-      </Row>
-
-      <Row className="item-50">
-        <Col xs={1} className="icon-50">
-          ✓
-        </Col>
-        <Col xs={11} className="text">
-        Competent
-        </Col>
-      </Row>
-                        </Container>
-                        <br /><br /><h4>What happens next?</h4>
-                        <Container>
-                        <Row className="horizontal-section-77">
-        <Col>
-          <p>1 We Schedule a call at<br/>
-           your convenience</p>
-        </Col>
-        <Col>
-          <p><strong>2</strong> We do a discovery<br/>and consulting meting</p>
-        </Col>
-        <Col>
-          <p><strong>3</strong> We prepare a<br/>proposal</p>
-        </Col>
-      </Row>
-                        </Container>
-                    </Col>
-                    <Col md={6} className="form-col">
-                        <Container className="form-container">
-                            <h1>Schedule a Free Consultation</h1>
-                            <hr />
-                            <Form>
-                            <Form.Group controlId="firstName">
-                            <Form.Label>First Name</Form.Label>
-                            <Form.Control type="text" placeholder="Enter first name" required />
-                        </Form.Group>
-                        <Form.Group controlId="lastName">
-                            <Form.Label>Last Name</Form.Label>
-                            <Form.Control type="text" placeholder="Enter last name" required />
-                        </Form.Group>
-                        <Form.Group controlId="company">
-                            <Form.Label>Company / Organization</Form.Label>
-                            <Form.Control type="text" placeholder="Enter company/organization" />
-                        </Form.Group>
-                        <Form.Group controlId="email">
-                            <Form.Label>Company Email</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" required />
-                        </Form.Group>
-                        <Form.Group controlId="phone">
-                            <Form.Label>Phone</Form.Label>
-                            <Form.Control type="tel" placeholder="Enter phone number" required />
-                        </Form.Group>
-                        <Form.Group controlId="help">
-                            <Form.Label>How Can We Help You?</Form.Label>
-                            <Form.Control as="select">
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
-                            </Form.Control>
-                        </Form.Group>
-                        <Form.Group controlId="message">
-                            <Form.Label>Message</Form.Label>
-                            <Form.Control as="textarea" rows={4} placeholder="Enter your message" required />
-                        </Form.Group>
-                                <Button variant="secondary" type="submit">
-                                    Submit
-                                </Button>
-                            </Form>
-                        </Container>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-
-
+ 
+ 
+ 
   {/*company logos*/}
-
-
   <Container className="main-container-45">
       <Row>
         <Col md={6} className="left-column-45">
