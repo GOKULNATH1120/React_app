@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React_app/static/css/main.7bdb933a.css",
-    "main.js": "/React_app/static/js/main.1196fa24.js",
+    "main.css": "/React_app/static/css/main.eba7a48b.css",
+    "main.js": "/React_app/static/js/main.693d4c2f.js",
     "static/js/787.fad1ebcf.chunk.js": "/React_app/static/js/787.fad1ebcf.chunk.js",
     "static/media/bootstrap-icons.woff?": "/React_app/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
     "static/media/bootstrap-icons.woff2?": "/React_app/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
@@ -13,12 +13,12 @@
     "static/media/fintech.png": "/React_app/static/media/fintech.a246bfe6ba3d515a73a9.png",
     "static/media/erp.png": "/React_app/static/media/erp.4d1352944ffc50d905c2.png",
     "index.html": "/React_app/index.html",
-    "main.7bdb933a.css.map": "/React_app/static/css/main.7bdb933a.css.map",
-    "main.1196fa24.js.map": "/React_app/static/js/main.1196fa24.js.map",
+    "main.eba7a48b.css.map": "/React_app/static/css/main.eba7a48b.css.map",
+    "main.693d4c2f.js.map": "/React_app/static/js/main.693d4c2f.js.map",
     "787.fad1ebcf.chunk.js.map": "/React_app/static/js/787.fad1ebcf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bdb933a.css",
-    "static/js/main.1196fa24.js"
+    "static/css/main.eba7a48b.css",
+    "static/js/main.693d4c2f.js"
   ]
 }
